@@ -1,0 +1,173 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #dad3f8;
+}
+::selection{
+  background: #6d50e2;
+  color: #fff;
+}
+.container{
+  max-width: 1280px;
+  height: 650px;
+  width: 100%;
+  padding: 40px 50px  40px  40px;
+  background: #fff;
+  margin: 0 20px;
+  border-radius: 25px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.container .topic{
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.content .list{
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  margin-right: 50px;
+  position: relative;
+}
+.content .list label{
+  height: 60px;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 60px;
+  cursor: pointer;
+  padding-left: 25px;
+  transition: all 0.5s ease;
+  color: #333;
+  z-index: 12;
+}
+#home:checked ~ .list label.home,
+#Plus:checked ~ .list label.Plus,
+#search:checked ~ .list label.search,
+#cancel:checked ~ .list label.cancel,
+#user:checked ~ .list label.user{
+  color: #fff;
+}
+.content .list label:hover{
+  color: #6d50e2;
+}
+.content .slider{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 60px;
+  width: 100%;
+  border-radius: 12px;
+  background: #6d50e2;
+  transition: all 0.4s ease;
+}
+#home:checked ~ .list .slider{
+  top: 0;
+}
+#Plus:checked ~ .list .slider{
+  top: 60px;
+}
+#search:checked ~ .list .slider{
+  top: 120px;
+}
+#cancel:checked ~ .list .slider{
+  top: 180px;
+}
+#user:checked ~ .list .slider{
+  top: 240px;
+}
+.content .text-content{
+  width: 80%;
+  height: 100%;
+}
+.content .text{
+  display: none;
+}
+.content .text .title{
+  font-size: 25px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+.content .text p{
+  text-align: justify;
+}
+.content .text-content .home{
+  display: block;
+}
+#home:checked ~ .text-content .home,
+#Plus:checked ~ .text-content .Plus,
+#search:checked ~ .text-content .search,
+#cancel:checked ~ .text-content .cancel,
+#user:checked ~ .text-content .user{
+  display: block;
+}
+#Plus:checked ~ .text-content .home,
+#search:checked ~ .text-content .home,
+#cancel:checked ~ .text-content .home,
+#user:checked ~ .text-content .home{
+  display: none;
+}
+.content input{
+  display: none;
+}
+.Forms {
+  max-width: 640px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  opacity: 0.9;
+}
+.form {
+  width: 100%;
+}
+.form-group {
+  margin-bottom: 1.5rem;
+}
+.form-group label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+}
+.input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+}
+.error-message {
+  color: #ff0000;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+}
+.submit-btn {
+  background-color: #6d50e2;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.submit-btn:hover {
+  background-color: #553d9a;
+}
